@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="flashlight.perfect.com.newsclient.activitys.MainActivity">
+
+
+
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <fragment
+            android:id="@+id/center_layout"
+            android:name="flashlight.perfect.com.newsclient.fragments.CreaterFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <fragment
+            android:id="@+id/left_layout"
+            android:layout_gravity="left"
+            android:name="flashlight.perfect.com.newsclient.fragments.LeftFragment"
+            android:layout_width="300dp"
+            android:layout_height="match_parent" />
+
+        <fragment
+            android:id="@+id/right_layout"
+            android:layout_gravity="right"
+            android:name="flashlight.perfect.com.newsclient.fragments.RightFragment"
+            android:layout_width="300dp"
+            android:layout_height="match_parent" />
+
+    </android.support.v4.widget.DrawerLayout>
+
+</LinearLayout>
