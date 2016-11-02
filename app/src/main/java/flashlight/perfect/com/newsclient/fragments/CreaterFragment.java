@@ -51,6 +51,7 @@ public class CreaterFragment extends Fragment implements XListView.IXListViewLis
         //为注解框架进行初始化
         mXlst = (XListView) view.findViewById(R.id.lst_center_fargment);
         NewsCenterTask task = new NewsCenterTask();
+        Log.e("---------","task==="+task.toString());
         task.setOnloadInfoLitenter(this);
 //        task.execute(HttpUtlis.PATH+HttpUtlis.LIST);
         Log.e("----------", "HttpUtlis.PATH+HttpUtlis.LIST" + HttpUtlis.PATH + HttpUtlis.LIST);
@@ -65,7 +66,7 @@ public class CreaterFragment extends Fragment implements XListView.IXListViewLis
         mGson = new Gson();
         NewList data = mGson.fromJson(msg, new TypeToken<NewList>() {
         }.getType());
-        Log.e("----------", "====" + data.toString());
+        Log.e("----------", "==111111111111111111==" + data.toString());
         mData = data.getData();
         mAdapter = new CenterAdapter(getContext());
         mAdapter.setData(mData);

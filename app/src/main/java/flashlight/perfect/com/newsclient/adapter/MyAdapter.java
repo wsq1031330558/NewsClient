@@ -30,7 +30,7 @@ public abstract class MyAdapter<T> extends BaseAdapter {
 
     @Override
     public int getCount() {
-        return null!=mList?0:mList.size();
+        return null==mList?0:mList.size();
     }
 
     @Override

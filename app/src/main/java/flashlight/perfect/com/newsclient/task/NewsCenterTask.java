@@ -16,40 +16,44 @@ import flashlight.perfect.com.newsclient.inter.onLoadInfoListener;
  */
 
 public class NewsCenterTask extends AsyncTask<String, Void, String> {
-    static final String url = "http://118.244.212.82:9092/newsClient/path/news_list?ver=1&subid=1&dir=1&nid=1&stamp=20140321&cnt=20";
+    {
+        Log.e("——————————", "---------");
+    }
+    //static final String url = "http://118.244.212.82:9092/newsClient/path/news_list?ver=1&subid=1&dir=1&nid=1&stamp=20140321&cnt=20";
 
     onLoadInfoListener mLoadInfoListener;
 
-//    public NewsCenterTask(onLoadInfoListener loadInfoListener) {
-//        this.mLoadInfoListener = loadInfoListener;
-//    }
     public void setOnloadInfoLitenter(onLoadInfoListener loadInfoListener){
         this.mLoadInfoListener = loadInfoListener;
     }
-
-
-
 
     @Override
     protected String doInBackground(String... params) {
         //路径地址
         String path = params[0];
-        path=url;
+        Log.e("-------","------path="+path.toString());
+      //  path=url;
         HttpURLConnection httpURLConnection = null;
         InputStream inputStream = null;
         try {
-            URL url = new URL(path);
+            URL url= new URL(path);
+            Log.e("-------","------url="+url.toString());
             httpURLConnection = (HttpURLConnection) url.openConnection();
-            if (httpURLConnection.getResponseCode() ==200) {
+            Log.e("-------","------httpURLConnection="+httpURLConnection.toString());
+            Log.e("------","___________________"+httpURLConnection.getResponseCode());
+            if (httpURLConnection.getResponseCode() ==HttpURLConnection.HTTP_OK) {
+                Log.e("-------","------");
                 inputStream = httpURLConnection.getInputStream();
-                byte[] bytes = new byte[2 * 1024];
+                byte[] bytes=new byte[1024];
+                Log.e("------","------bytes=="+bytes.length);
+
                 int length = 0;
                 StringBuffer buffer = new StringBuffer();
-                while ((length = inputStream.read(bytes, 0, length)) != -1) {
+                while ((length = inputStream.read(bytes)) != -1) {
                     buffer.append(new String(bytes, 0, length));
-
+                    //Log.e("====",""+ buffer.toString());
                 }
-                Log.e("====",""+ buffer.toString());
+                Log.e("====","222222222222222222"+ buffer.toString());
                 return buffer.toString();
             }
         } catch (MalformedURLException e) {
