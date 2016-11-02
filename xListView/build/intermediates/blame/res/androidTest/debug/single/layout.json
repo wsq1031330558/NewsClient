@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "F:\\studioWorkspace\\NewsClient\\xListView\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\xlistview_footer.xml",
+        "source": "F:\\studioWorkspace\\NewsClient\\xListView\\build\\intermediates\\bundles\\debug\\res\\layout\\xlistview_footer.xml"
+    },
+    {
+        "merged": "F:\\studioWorkspace\\NewsClient\\xListView\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\xlistview_header.xml",
+        "source": "F:\\studioWorkspace\\NewsClient\\xListView\\build\\intermediates\\bundles\\debug\\res\\layout\\xlistview_header.xml"
+    },
+    {
+        "merged": "F:\\studioWorkspace\\NewsClient\\xListView\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\main.xml",
+        "source": "F:\\studioWorkspace\\NewsClient\\xListView\\build\\intermediates\\bundles\\debug\\res\\layout\\main.xml"
+    },
+    {
+        "merged": "F:\\studioWorkspace\\NewsClient\\xListView\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\list_item.xml",
+        "source": "F:\\studioWorkspace\\NewsClient\\xListView\\build\\intermediates\\bundles\\debug\\res\\layout\\list_item.xml"
+    }
+]
